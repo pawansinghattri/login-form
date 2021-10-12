@@ -23,5 +23,6 @@ $conn= mysqli_connect('localhost', 'root', '');
             echo "Connection Failed";
         }
     }
+    mysqli_close($conn);
 
 ?>

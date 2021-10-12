@@ -1,10 +1,7 @@
 <?php
 session_start();
 $conn= mysqli_connect('localhost', 'root', '');
-if($conn){
-    echo "connection successful";
-}else
-    echo "Connection Failed";
+
 
     $x=mysqli_select_db($conn, 'sessionpractical');
     $name= $_POST['user'];
@@ -18,7 +15,9 @@ if($conn){
         header('location:home.php');
 
     }else{
-        header('location:login.php');
+        // header('location:login.php');
+        echo 'no account, please register first
+        <p>Don\'t have Account? <a href="/php_practice/login-form/signup.php">Sign up</a></p>';
     }
 
 ?>
